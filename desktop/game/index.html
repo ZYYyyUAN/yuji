@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f3f0e7"><title>余迹</title>
+  <link rel="stylesheet" href="ui.css?v=scene18"><link rel="stylesheet" href="mobile-layout.css?v=entry21">
+  <script src="mobile-layout.js" defer></script><script src="ink.js" defer></script><script src="arena.js?v=polish11" defer></script><script src="engine.js?v=bots17" defer></script><script src="forms.js?v=paint15" defer></script><script src="sculpture.js?v=paint15" defer></script><script src="render.js?v=reveal13" defer></script><script src="choose.js?v=paint15" defer></script><script src="viewer.js?v=direct14" defer></script><script src="immersion.js?v=polish11" defer></script><script src="archive.js?v=reveal13" defer></script><script src="reveal.js?v=scene18" defer></script><script src="ending.js?v=sentences12" defer></script><script src="play.js?v=scene18" defer></script>
+  <script src="desktop.js" defer></script>
+</head>
+<body>
+  <header class="preview-header">
+    <button class="wordmark" id="home-button" type="button">余迹<span>单机交锋</span></button>
+    <p class="session-label" id="session-label">一位玩家，四位机器人</p>
+    <div class="header-actions"><button type="button" id="online-button" hidden class="text-button online-button" aria-haspopup="dialog">联机 <small>未开发</small></button><button id="library-button" class="text-button" type="button">历史作品</button><button id="sound-button" class="text-button" aria-pressed="true" aria-label="关闭声音">声音 开</button><button id="fullscreen-button" class="text-button">全屏 ⛶</button><button class="text-button header-help" type="button" id="help-button">玩法 <span aria-hidden="true">↗</span></button></div>
+  </header>
+  <main>
+    <section id="setup" class="screen setup-screen" aria-labelledby="setup-title">
+      <div class="setup-copy">
+        <p class="eyebrow"><span class="edition-dot" aria-hidden="true"></span> 雨后小镇 · 自由交锋</p>
+        <h1 id="setup-title" tabindex="-1">余迹<i aria-hidden="true">。</i></h1>
+        <p class="intro">活到最后，<br>或在终局占据最多颜色。</p>
+        <fieldset class="color-picker"><legend>选择你的颜色</legend><div id="color-options" class="color-options"></div><div class="selection-note"><span id="selected-name">灰蓝</span><span id="setup-roster">你与4辆机器人 · 每局有白色</span></div></fieldset>
+        <div class="count-picker"><label for="tank-count">参战坦克 <small>2—8 辆</small><span><output id="tank-count-value">5</output> 辆</span></label><input id="tank-count" type="range" min="2" max="8" step="1" value="5" aria-label="参战坦克数量"><div class="count-range"><label class="difficulty-option" for="bot-difficulty">难度 <select id="bot-difficulty"><option value="easy">轻松</option><option value="standard" selected>标准</option><option value="challenge">挑战</option></select></label><label class="supply-option"><input type="checkbox" id="supply-toggle" checked>公共补给 <small>试用</small></label></div></div><button class="primary-button" type="button" id="start-button">开始交锋 <span aria-hidden="true">↗</span></button>
+        <p class="equal-note"><span>键鼠操作</span> WASD 移动 · 鼠标瞄准 · 左键射击</p>
+      </div>
+      <figure class="setup-art">
+        <div class="art-corner corner-a" aria-hidden="true"></div><div class="art-corner corner-b" aria-hidden="true"></div>
+        <div class="canvas-mat"><canvas id="cover-canvas" width="1400" height="1000" role="img" aria-label="按实际游戏规则运行的交锋示意"></canvas></div>
+        <figcaption><span>交锋中的一刻</span><span>移动 · 瞄准 · 射击</span></figcaption>
+        <div class="cover-tank" id="cover-tank" aria-hidden="true"></div>
+      </figure>
+    </section>
+    <section id="battle" class="screen battle-screen" aria-labelledby="battle-title" hidden>
+      <h1 id="battle-title" class="sr-only" tabindex="-1">纸面交锋</h1><p id="battle-eyebrow" class="sr-only">交锋进行中</p>
+      <div class="combat-hud">
+        <div class="health-hud"><div class="player-identity"><div id="player-tank" aria-hidden="true"></div><span id="player-color">灰蓝</span></div><div class="vitals"><div class="meter-title"><span>生命 <strong id="hp">400</strong></span><span id="player-state">交锋中</span></div><div class="meter health-meter"><span id="hp-bar"></span></div><div class="armor-line"><span>护甲 <strong id="armor">24</strong></span><div class="meter armor-meter"><span id="armor-bar"></span></div><span id="armor-note" class="sr-only"></span></div><div class="ammo-line"><span>弹仓</span><div id="ammo-slots" class="ammo-slots" role="img" aria-label="弹药3发，共3发"><i><b></b></i><i><b></b></i><i><b></b></i></div><span id="ammo-count">3/3</span><span id="ammo-state">就绪</span></div></div></div>
+        <div class="match-controls"><div class="match-clock"><strong id="clock">10:00</strong></div><div class="alive-count"><span id="battle-difficulty">标准</span> · <span id="alive">5</span> / <span id="total-tanks">5</span> 存活</div></div>
+        <div class="battle-buttons"><button type="button" class="glass-button" id="rank-button" aria-expanded="false" aria-controls="rank-panel">占色</button><button type="button" class="glass-button" id="battle-help">玩法</button><button type="button" class="icon-button glass-button" id="pause-button" aria-label="暂停">Ⅱ</button></div>
+      </div>
+      <p id="supply-status" class="supply-status" hidden></p><div class="battle-workspace"><div class="arena-wrap" id="arena-wrap"><div class="battle-backdrop" id="battle-backdrop" aria-hidden="true"><img id="battle-background" src="assets/lane.png" alt="" decoding="async"></div><canvas id="battle-canvas" width="1400" height="1000" role="img" aria-label="纸面战场，键盘移动鼠标射击；触屏使用左移动右瞄准摇杆"></canvas><p class="arena-hint" id="arena-hint">WASD 移动 · 鼠标瞄准 · 按住左键射击</p><div class="spectator-banner" id="spectator-banner" hidden><span>你已退场，颜色留在画布。</span><button type="button" id="speed-button">加速观看 ×4</button></div></div></div>
+      <div class="bottom-hud"><div class="self-area"><span>你的占色</span><strong id="self-share">0.0<small>%</small></strong></div><span class="regen-row">回血 <strong id="regen">+0.0</strong> / 秒</span><p class="desktop-hint">WASD 移动 · 鼠标瞄准射击 · Esc 暂停</p></div>
+      <aside id="rank-panel" class="floating-panel" aria-label="实时占色" hidden><div class="panel-heading"><h2>画布占色</h2><button id="rank-close" aria-label="关闭占色明细">×</button></div><div id="battle-ranking" class="area-list"></div><div class="coverage-label"><span>总覆盖</span><strong id="coverage-value">0.0%</strong></div><div class="ownership-strip" id="ownership-strip" aria-hidden="true"></div><p>最后存活者获胜；超时或全灭按面积判胜。</p></aside>
+      <div class="touch-controls" id="touch-controls" aria-label="触屏双摇杆"><div class="stick-wrap move-wrap"><div id="move-stick" class="stick" role="group" aria-label="移动摇杆"><span class="stick-cross" aria-hidden="true"></span><span class="stick-knob" aria-hidden="true"></span></div><span>移动</span></div><div class="stick-wrap aim-wrap"><div id="aim-stick" class="stick" role="group" aria-label="瞄准射击摇杆"><span class="stick-cross" aria-hidden="true"></span><span class="stick-knob" aria-hidden="true"></span></div><span>瞄准 · 松开停火</span></div></div>
+      <div class="hit-vignette" id="hit-vignette" aria-hidden="true"></div>
+    </section>
+    <section id="result" class="screen result-screen" aria-labelledby="result-title" hidden>
+      <h1 id="result-title" class="sr-only" tabindex="-1">本局作品</h1>
+      <div class="result-main">
+        <figure class="result-art"><div class="canvas-mat" id="art-mat"><canvas id="result-canvas" width="1400" height="1000" role="img" aria-label="本局实际移动留下的原画，不含坦克及弹丸"></canvas><canvas id="sculpture-canvas" tabindex="0" aria-label="本局墨斑作品，拖动或方向键旋转、滚轮缩放、Home回到展示角度" hidden></canvas><button type="button" id="reveal-skip" class="reveal-skip" hidden>看最终效果 <span aria-hidden="true">↗</span></button><button type="button" id="focus-art" class="expand-art" aria-label="展开作品" title="展开作品" aria-expanded="false"><svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg><svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 9h5V4m11 5h-5V4M9 20v-5H4m11 5v-5h5"/></svg></button><div class="art-gestures" id="art-gestures" hidden><span>拖动旋转 · 滚轮缩放</span><div><button id="art-zoom-out" aria-label="缩小作品">−</button><button id="art-zoom-in" aria-label="放大作品">＋</button></div></div><aside id="view-drawer" class="view-drawer" aria-label="收藏视角" hidden><div class="view-drawer-heading"><h2>收藏视角</h2><button type="button" id="close-views" aria-label="关闭收藏视角">×</button></div><div id="main-view-list" class="view-list"></div></aside></div><figcaption><strong id="art-caption">本局原画</strong><div class="view-tools"><span id="duration-caption"></span><button type="button" id="collect-view" disabled><span aria-hidden="true">＋</span> 收藏视角</button><button type="button" id="show-views" aria-expanded="false" aria-controls="view-drawer" disabled>视角 0</button></div></figcaption></figure>
+        <div class="art-actions"><button id="toggle-art" type="button" disabled>看原画</button><button id="art-reset" type="button" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m12 3 8 5-8 5-8-5 8-5Zm-8 9 8 5 8-5M4 16l8 5 8-5"/></svg><span>展示角度</span></button><button id="art-rise" type="button" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M4 15v5h16v-5"/></svg><span>重新升起</span></button><button id="retry-shape" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 7a9 9 0 0 0-15-1L2 9m0-6v6h6m-4 8a9 9 0 0 0 15 1l3-3m0 6v-6h-6"/></svg><span>换个形态</span></button></div><p id="shape-status" class="shape-status" role="status" aria-live="polite" hidden></p>
+      </div>
+      <aside class="result-sidebar" aria-label="本局结算">
+        <div class="winner-summary"><div class="winner-swatch" id="winner-swatch" aria-hidden="true"></div><div><p class="eyebrow" id="winner-label">本局胜者</p><h2><span id="winner-name"></span><small id="winner-reason"></small></h2></div></div>
+        <div class="result-standings"><h2>本局占色</h2><div id="result-ranking" class="area-list result-ranking"></div></div>
+        <div class="save-actions"><button type="button" class="save-button" id="download-art" title="保存立体作品的当前角度" disabled><span>保存此角度</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M5 16v4h14v-4"/></svg></button><button type="button" class="save-button" id="download-original"><span>保存原画</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M5 16v4h14v-4"/></svg></button></div>
+        <button type="button" class="outline-button choose-again" id="again-button">再来一局 <span aria-hidden="true">↗</span></button><p id="download-status" class="download-status" role="status"></p>
+      </aside>
+    </section>
+  </main>
+  <div class="rotate-notice" id="rotate-notice"><span aria-hidden="true">▭ ↻</span><h2>横过来，展开这张画布。</h2><p>双手分别控制移动与瞄准</p></div><footer class="preview-footer"><span>TANK CANVAS / MOVE & PAINT</span><p>五种颜色，各自交锋，共同成画。</p></footer>
+  <dialog id="ending-dialog" aria-labelledby="ending-intro-title" data-phase="intro">
+    <button type="button" id="ending-skip" class="ending-skip">跳过</button>
+    <button type="button" id="ending-advance" class="ending-advance" hidden>下一句 <span id="ending-progress" aria-hidden="true"></span><span aria-hidden="true">→</span></button>
+    <section class="ending-copy" data-ending-phase="intro">
+      <p class="ending-kicker">交锋之后</p>
+      <h2 id="ending-intro-title" aria-live="polite" aria-atomic="true"><span data-ending-sentence>你在争取胜利。</span><span data-ending-sentence hidden>他们也是。</span><span data-ending-sentence hidden>没有人安排这些颜色如何相遇。</span><span data-ending-sentence hidden>各自的选择，留下了一幅谁也没有事先画好的图景。</span><span data-ending-sentence hidden>从局部的交锋，到共同的痕迹——这是我们对涌现的一次尝试。</span></h2>
+      <div class="ending-actions-slot"><button type="button" id="ending-watch" class="ending-next" data-ending-actions hidden>继续 <span aria-hidden="true">↗</span></button></div>
+    </section>
+    <section class="ending-video" data-ending-phase="video" hidden>
+      <h2 id="ending-video-title" class="sr-only">涌现</h2>
+      <video id="emergence-film" playsinline controls preload="none" aria-label="未使用的媒体占位"></video>
+      <button type="button" id="ending-play" class="ending-next ending-play" hidden>播放短片 ↗</button>
+      <p id="ending-media-status" class="ending-media-status" role="status"></p>
+    </section>
+    <section class="ending-copy ending-outro" data-ending-phase="outro" hidden>
+      <p class="ending-kicker">涌现</p>
+      <h2 id="ending-outro-title" aria-live="polite" aria-atomic="true"><span data-ending-sentence>各自争胜，共同留痕。</span><span data-ending-sentence hidden>换一个角度，再看这些痕迹。</span><span data-ending-sentence hidden>下一次交锋，又会留下什么？</span></h2>
+      <div class="ending-actions-slot"><div class="ending-outro-actions" data-ending-actions hidden><button type="button" id="ending-again" class="ending-next">继续体验 <span aria-hidden="true">↗</span></button><button type="button" id="ending-return" class="ending-stay">再看一会作品</button></div></div>
+    </section>
+  </dialog>
+  <dialog id="library-dialog" aria-labelledby="library-title">
+    <header class="library-heading"><div><h2 id="library-title">历史作品 <span id="library-count">0</span></h2><p id="library-storage">保存在本机</p></div><button type="button" id="library-close" class="icon-button" aria-label="关闭历史作品">×</button></header>
+    <div class="library-workspace"><nav id="library-items" class="library-items" aria-label="历局作品列表"></nav><div id="library-empty-detail" class="library-empty-detail"><p>还没有记录</p></div><section id="library-detail" class="library-detail" aria-label="历史作品展台" hidden><div class="library-title-row"><h3 id="library-name">原画</h3><p id="library-date"></p></div><div id="library-stage" class="library-stage"><canvas id="library-canvas" tabindex="0" aria-label="历史立体作品，可拖动旋转、滚轮或双指缩放"></canvas><canvas id="library-original" width="1400" height="1000" aria-label="这局实际留下的透明原画" hidden></canvas><button type="button" id="library-focus" class="expand-art" aria-label="全屏查看历史作品" title="全屏查看历史作品" aria-expanded="false"><svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg><svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 9h5V4m11 5h-5V4M9 20v-5H4m11 5v-5h5"/></svg></button><span class="library-gesture">拖动旋转 · 滚轮或双指缩放</span></div><div class="library-actions"><button type="button" id="library-toggle">看原画</button><button type="button" id="library-reset">展示角度</button><button type="button" id="library-collect">＋ 收藏视角</button><button type="button" id="library-save-angle" class="library-save">保存此角度</button><button type="button" id="library-save-original" class="library-save">保存原画</button></div><div id="library-view-list" class="view-list library-view-list"></div></section></div>
+  </dialog><p id="collection-status" class="collection-status" role="status" aria-live="polite"></p>
+  <p id="status-message" class="sr-only" role="status"></p>
+  <dialog id="online-dialog" aria-labelledby="online-title"><p class="eyebrow">联机</p><h2 id="online-title">联机模式尚未开发</h2><p class="help-rule">当前可游玩单机模式，其他坦克由机器人控制。</p><button type="button" id="online-close" class="primary-button">返回单机 <span aria-hidden="true">↗</span></button></dialog>
+  <dialog id="help-dialog" aria-labelledby="help-title"><button class="dialog-close icon-button" type="button" id="close-help" aria-label="关闭操作说明">×</button><p class="eyebrow">玩法与操作</p><h2 id="help-title">选一色，留下一局。</h2>
+    <p class="help-rule touch-help">触屏：左摇杆移动，右摇杆瞄准并射击；松开右摇杆停止射击。建议横屏游玩。</p><dl class="instructions"><div><dt>WASD / 方向键</dt><dd>移动坦克</dd></div><div><dt>鼠标</dt><dd>独立控制炮管方向</dd></div><div><dt>按住左键</dt><dd>连续射击，松开停止</dd></div><div><dt>Esc</dt><dd>暂停或继续</dd></div></dl>
+    <p class="help-rule">借掩体绕侧或撤退：坦克不能穿过，弹丸碰到掩体会消失。每辆坦克有3发弹仓，射击间隔0.65秒，缺弹时每0.85秒自动恢复一发；边开火边恢复，打空后也可以停火攒弹。敌车上方的小格显示它的剩余弹药。</p><p class="help-rule">淡色场景仅作背景，石块才会阻挡坦克和弹丸；暂停时可以关闭场景背景。</p><p class="help-rule">难度影响机器人的反应与瞄准。它们有追击、游走、谨慎等不同偏好；基础生命、伤害、速度、弹仓和视野相同。</p><p class="help-rule">开启公共补给后，场上会提前3秒预告位置。经过补给即可拾取，移动速度提高25%，持续7秒；双方都能争夺，不回复生命或护甲。开局可取消勾选，体验无补给对局。</p><p class="help-rule">移动一段距离，留下一枚墨斑；停下不落墨，后色覆盖前色。射击只用于攻击。敌色弹丸命中后消失；弹丸之间互相穿过。走过旧痕迹不会受伤。</p>
+    <p class="help-rule">伤害先扣护甲，再扣生命。护甲不可恢复；自己的颜色面积越多，生命恢复越快，收益逐渐减小并有上限。</p>
+    <p class="help-rule">每局最多10分钟，最后存活者立即获胜；全灭或时间到，按最终面积判胜。战亡不额外落墨。结束后，本局墨斑会尝试组成一件立体作品，可旋转欣赏、查看原画和保存；成形不理想时仍可保留原画、重试或再来一局。</p>
+    <button type="button" class="primary-button" id="ack-help">知道了 <span aria-hidden="true">↗</span></button>
+  </dialog>
+  <dialog id="pause-dialog" aria-labelledby="pause-title"><p class="eyebrow">对局已暂停</p><h2 id="pause-title">让颜色歇一会。</h2><p class="help-rule">计时与交锋都已暂停，回到画布时继续。</p><div class="pause-options"><button type="button" id="pause-sound">关闭声音</button><button type="button" id="pause-backdrop" aria-pressed="true">场景背景 开</button><button type="button" id="pause-fullscreen">切换全屏 ⛶</button></div><button type="button" class="primary-button" id="resume-button">继续交锋 <span aria-hidden="true">↗</span></button><button type="button" class="text-button pause-back" id="abandon-button">结束本局并重选颜色</button></dialog>
+</body>
+</html>

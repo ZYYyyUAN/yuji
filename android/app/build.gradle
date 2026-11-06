@@ -1,0 +1,9 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'com.yuji.game'
+    compileSdk 36
+    defaultConfig { applicationId 'com.yuji.game'; minSdk 26; targetSdk 36; versionCode 21; versionName '0.21.0' }
+    buildFeatures { buildConfig true }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+    androidResources { noCompress 'mp4', 'wav' }
+}

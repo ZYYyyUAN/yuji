@@ -1,0 +1,506 @@
+{
+  "productVersion": "0.21.0",
+  "source": "Final delivered local source snapshot",
+  "copiedFiles": [
+    {
+      "path": "web/archive.js",
+      "sha256": "d815dde7fcc609110093bf0430033fd3bb990cc181c5f5ac37944d85df593236"
+    },
+    {
+      "path": "web/arena.js",
+      "sha256": "994f23c97e1897195efce9503eb98720a8352cff775232ac92115b1e08b1a3c1"
+    },
+    {
+      "path": "web/ASSETS.md",
+      "sha256": "cf60bae85691e1b130d66e8a6ba3cccbc5ff80060ccd2764b045b7fcab6b0957"
+    },
+    {
+      "path": "web/choose.js",
+      "sha256": "a84841ccc7eb51850ac21910b7651a96d0a4b596ae3dfae1509a001f3e261b49"
+    },
+    {
+      "path": "web/DESIGN.md",
+      "sha256": "c7e1e9a751964ccd6131d9b3e76c2f92cc233ab04c67673979c76a7e38def4ef"
+    },
+    {
+      "path": "web/ending.js",
+      "sha256": "27af4d849b9e7a394888b8c21e6806f97e1b825851738d915f5e4dc9d5140a2d"
+    },
+    {
+      "path": "web/engine.js",
+      "sha256": "56a61a34d3c114c7e50f46d1c4f4791ae3090e63e892cbad1697e9f09a2360e2"
+    },
+    {
+      "path": "web/forms.js",
+      "sha256": "9a452d8fae5082ada52efd24b8ddb4a3212d40456359d1d08cdd124d843ab8ce"
+    },
+    {
+      "path": "web/immersion.js",
+      "sha256": "231299181d1ef131e1d5912284f7d147af726e0041d4387a6b77edcdbfc7d83e"
+    },
+    {
+      "path": "web/index.html",
+      "sha256": "897a2cf7aff15cb5368164bea3c6cd7664b85f3be5a78e8d2a221c61da84ab5d"
+    },
+    {
+      "path": "web/ink.js",
+      "sha256": "28507751cf633d5c882353af872e79a3226b2cfa1b13b8eb5b8fd46ab0345e4d"
+    },
+    {
+      "path": "web/mobile-layout.css",
+      "sha256": "c56c7068c357462f017a7a3b2ad902a617c48ee3ef97708173bc3d4b8aebbeaa"
+    },
+    {
+      "path": "web/mobile-layout.js",
+      "sha256": "4dc307534210f8e26a2af11357ef1315049bd3be9786606ef6604fd70556ff9b"
+    },
+    {
+      "path": "web/play.js",
+      "sha256": "fb9f7fbd8027006ef9af06d9fd13fdda8bf631f73211ce10043132505467d046"
+    },
+    {
+      "path": "web/render.js",
+      "sha256": "cd53d97ef10397a714a7f3a3cd2731e713d3d795aab27e5839109efe77ebe4c6"
+    },
+    {
+      "path": "web/reveal.js",
+      "sha256": "e85bfb9767bfc4c525d62a5fe66ee12805ad5295141530433115d833cd331ba7"
+    },
+    {
+      "path": "web/sculpture-worker.js",
+      "sha256": "a649e130afcd105b9329f3f0562e9e098b919589aa54abad922456af9c30b7ee"
+    },
+    {
+      "path": "web/sculpture.js",
+      "sha256": "f76bb3136534cf763330c7a2a9b786c6822757f4ddf4d863d0f5a955383edef0"
+    },
+    {
+      "path": "web/ui.css",
+      "sha256": "f962cfa03c764616e7c846041cae919cee0bfbd0078c56a46fa01e01b33f4d1c"
+    },
+    {
+      "path": "web/viewer.js",
+      "sha256": "72573df20da8c13e0602ba11669c96da276c74cca387017668c00e8ea0e74f6c"
+    },
+    {
+      "path": "web/assets/courtyard.png",
+      "sha256": "d8d6f1023c793ab95827f6d59a5619ef26999858051ab9acb1ddf570bbff88d0"
+    },
+    {
+      "path": "web/assets/lane.png",
+      "sha256": "4039ac213a42d5a7d172b76950b9753d32fc088b02bbb3bd06bc1776bf0837ac"
+    },
+    {
+      "path": "web/assets/paper.wav",
+      "sha256": "cc7b2042c15ecbfedd08ad58acdbfd146f0de2c83bd17df1502eaa65f9637a2f"
+    },
+    {
+      "path": "web/assets/room.png",
+      "sha256": "6ee0f427aba2801b3045254f0afde6b55d74aa581d922a2ecc445f59a0d7a92e"
+    },
+    {
+      "path": "web/assets/wood.wav",
+      "sha256": "9a8d8f1038c2f6a186d00c173f9f251d056bafc49a839d6128f9cc13a377632f"
+    },
+    {
+      "path": "taptap/game.js",
+      "sha256": "d1aa0f30b0fd2ddb48c8a77963c363d0200a786c993d027a1ff3252decfc7ac5"
+    },
+    {
+      "path": "taptap/game.json",
+      "sha256": "7f49f839a6275e0c890a290d34abf666c68a581275bd234cf7990e74a1718473"
+    },
+    {
+      "path": "taptap/project.config.json",
+      "sha256": "63e214f440f325679d5fcc185946a5c369c01cc360e06a18b86197bf7347ea82"
+    },
+    {
+      "path": "taptap/SOURCE_MANIFEST.json",
+      "sha256": "730e60cb8bff1e914da1d33bc053eff8fceffc713e1a3ef7e136022f37e9f7d1"
+    },
+    {
+      "path": "taptap/assets/courtyard.png",
+      "sha256": "d8d6f1023c793ab95827f6d59a5619ef26999858051ab9acb1ddf570bbff88d0"
+    },
+    {
+      "path": "taptap/assets/cover.png",
+      "sha256": "4a944fe2198dbbd8a8c1b7697d92edfc7beabd7a6eefe948aacbc1883b673544"
+    },
+    {
+      "path": "taptap/assets/hit.wav",
+      "sha256": "f9d6ef10b35305e1b956da702ac79f0065f72481044dbed878e6d1624095f3f7"
+    },
+    {
+      "path": "taptap/assets/lane.png",
+      "sha256": "4039ac213a42d5a7d172b76950b9753d32fc088b02bbb3bd06bc1776bf0837ac"
+    },
+    {
+      "path": "taptap/assets/paper.wav",
+      "sha256": "cc7b2042c15ecbfedd08ad58acdbfd146f0de2c83bd17df1502eaa65f9637a2f"
+    },
+    {
+      "path": "taptap/assets/room.png",
+      "sha256": "6ee0f427aba2801b3045254f0afde6b55d74aa581d922a2ecc445f59a0d7a92e"
+    },
+    {
+      "path": "taptap/assets/shot.wav",
+      "sha256": "1b91e2f23aed7be9b29368e221b708dd2d86145354da793fcb43c8a532bc8fc6"
+    },
+    {
+      "path": "taptap/assets/wood.wav",
+      "sha256": "9a8d8f1038c2f6a186d00c173f9f251d056bafc49a839d6128f9cc13a377632f"
+    },
+    {
+      "path": "taptap/core/arena.js",
+      "sha256": "994f23c97e1897195efce9503eb98720a8352cff775232ac92115b1e08b1a3c1"
+    },
+    {
+      "path": "taptap/core/battle-draw.js",
+      "sha256": "4e45c4e87d25e7419195818529f7221af9d890d949d689b8b806d1f116d304c5"
+    },
+    {
+      "path": "taptap/core/choose.js",
+      "sha256": "3973d1c951f7313a6f843cfa1a7cc2909c384b0d0812039d9ed0e3b90c13d896"
+    },
+    {
+      "path": "taptap/core/engine.js",
+      "sha256": "56a61a34d3c114c7e50f46d1c4f4791ae3090e63e892cbad1697e9f09a2360e2"
+    },
+    {
+      "path": "taptap/core/forms.js",
+      "sha256": "9a452d8fae5082ada52efd24b8ddb4a3212d40456359d1d08cdd124d843ab8ce"
+    },
+    {
+      "path": "taptap/core/ink.js",
+      "sha256": "28507751cf633d5c882353af872e79a3226b2cfa1b13b8eb5b8fd46ab0345e4d"
+    },
+    {
+      "path": "taptap/core/render.js",
+      "sha256": "417fb4fe2712423040453b59a344c738b78ea39567cb9eeeb57fe0db1f5feff3"
+    },
+    {
+      "path": "taptap/core/sculpture.js",
+      "sha256": "f76bb3136534cf763330c7a2a9b786c6822757f4ddf4d863d0f5a955383edef0"
+    },
+    {
+      "path": "taptap/src/app.js",
+      "sha256": "ab8d488127d5870878df4b6c109221b52e3a3498f2970b36c9eddb4df94cfba7"
+    },
+    {
+      "path": "taptap/src/config.js",
+      "sha256": "a5303a16a7b4da99e950317e6e46ebe4d2446376f77a7f7251cc618d575dc2d1"
+    },
+    {
+      "path": "taptap/src/draw.js",
+      "sha256": "26d601c27c721dfbb12054ff70385796d75fca6ecbff7763fe9cad29e1184a4c"
+    },
+    {
+      "path": "taptap/src/platform.js",
+      "sha256": "a9b56590e3052b8c87f064b84029d675e55cc10876be6e6d3bc5e7da778f7c73"
+    },
+    {
+      "path": "taptap/src/store.js",
+      "sha256": "4b5bf1259c5fc87be62f6a605d5008a1adf0aae167d6a8b5255fc3a179c73d4d"
+    },
+    {
+      "path": "android/.gitignore",
+      "sha256": "182f7d52f38273f3cce1e9d649e22ea20db0164f3e1599be236b0f2f8e6d3f32"
+    },
+    {
+      "path": "android/build.gradle",
+      "sha256": "ead514a53d86db8eebf94049086bb358487a161305a643e77225ece7bbc51469"
+    },
+    {
+      "path": "android/DESIGN.md",
+      "sha256": "3a37d23953b17e7a929fa06f1573cc19b87d85074f3257e3289098f9f84c1523"
+    },
+    {
+      "path": "android/gradle.properties",
+      "sha256": "7fecfebdfd698e246391b48bcafda608ef1fa58b804238f59fc2350bf70ef89f"
+    },
+    {
+      "path": "android/gradlew",
+      "sha256": "63135287117a1e6d12c84580f1f49c61d1ba02218ecd28660605e97f976e7d65"
+    },
+    {
+      "path": "android/gradlew.bat",
+      "sha256": "af835f98787e9269af5a046edcb821a592fed372139df7b947b471a63cfc236b"
+    },
+    {
+      "path": "android/settings.gradle",
+      "sha256": "f914788d434dfb7cfcb9dd0728d9c75679f4bdd572ee60daa1d9cd6910e2c621"
+    },
+    {
+      "path": "android/sync-web.py",
+      "sha256": "2494c83afc0b3c3beaeca6f6675896bb71fe7ae74bebf6791236270a9a317977"
+    },
+    {
+      "path": "android/web-source-manifest.json",
+      "sha256": "9f32abbcb6ad5cdd50f34d2d9dd5afa316b6689ec7080626f0f5a8848e624da7"
+    },
+    {
+      "path": "android/WEB_ASSETS.md",
+      "sha256": "cf60bae85691e1b130d66e8a6ba3cccbc5ff80060ccd2764b045b7fcab6b0957"
+    },
+    {
+      "path": "android/app/build.gradle",
+      "sha256": "215b4a3d83b5f22dc8f30d7ba229772d877023d33e134d4c0806a24da1067aa5"
+    },
+    {
+      "path": "android/app/src/main/AndroidManifest.xml",
+      "sha256": "9ed8f44664b0f411da6caf3ef9ad0a2d1912ac885c7b63f9ad2988c4aa844f7d"
+    },
+    {
+      "path": "android/app/src/main/assets/web/archive.js",
+      "sha256": "7b9b0ea9cbf50c7c89653ba88a70d41859d6058fd4b6a39844d4da95266bea91"
+    },
+    {
+      "path": "android/app/src/main/assets/web/arena.js",
+      "sha256": "994f23c97e1897195efce9503eb98720a8352cff775232ac92115b1e08b1a3c1"
+    },
+    {
+      "path": "android/app/src/main/assets/web/choose.js",
+      "sha256": "a84841ccc7eb51850ac21910b7651a96d0a4b596ae3dfae1509a001f3e261b49"
+    },
+    {
+      "path": "android/app/src/main/assets/web/ending.js",
+      "sha256": "27af4d849b9e7a394888b8c21e6806f97e1b825851738d915f5e4dc9d5140a2d"
+    },
+    {
+      "path": "android/app/src/main/assets/web/engine.js",
+      "sha256": "56a61a34d3c114c7e50f46d1c4f4791ae3090e63e892cbad1697e9f09a2360e2"
+    },
+    {
+      "path": "android/app/src/main/assets/web/forms.js",
+      "sha256": "9a452d8fae5082ada52efd24b8ddb4a3212d40456359d1d08cdd124d843ab8ce"
+    },
+    {
+      "path": "android/app/src/main/assets/web/immersion.js",
+      "sha256": "231299181d1ef131e1d5912284f7d147af726e0041d4387a6b77edcdbfc7d83e"
+    },
+    {
+      "path": "android/app/src/main/assets/web/index.html",
+      "sha256": "aaa86066d1952849ef08de609a303f0d2d7ca32d4cb24cc3003859456e1ba627"
+    },
+    {
+      "path": "android/app/src/main/assets/web/ink.js",
+      "sha256": "28507751cf633d5c882353af872e79a3226b2cfa1b13b8eb5b8fd46ab0345e4d"
+    },
+    {
+      "path": "android/app/src/main/assets/web/native-layout.css",
+      "sha256": "c56c7068c357462f017a7a3b2ad902a617c48ee3ef97708173bc3d4b8aebbeaa"
+    },
+    {
+      "path": "android/app/src/main/assets/web/native.js",
+      "sha256": "acee70db247445b73db6dc9386c4642b44e6fc7b5dfdae292d77bf07f6a3f923"
+    },
+    {
+      "path": "android/app/src/main/assets/web/play.js",
+      "sha256": "833a637b16081cc1593634ddf1bf2719bc5fb072f60e8f1f630ff59036b9fb6c"
+    },
+    {
+      "path": "android/app/src/main/assets/web/render.js",
+      "sha256": "cd53d97ef10397a714a7f3a3cd2731e713d3d795aab27e5839109efe77ebe4c6"
+    },
+    {
+      "path": "android/app/src/main/assets/web/reveal.js",
+      "sha256": "e85bfb9767bfc4c525d62a5fe66ee12805ad5295141530433115d833cd331ba7"
+    },
+    {
+      "path": "android/app/src/main/assets/web/sculpture-worker.js",
+      "sha256": "a649e130afcd105b9329f3f0562e9e098b919589aa54abad922456af9c30b7ee"
+    },
+    {
+      "path": "android/app/src/main/assets/web/sculpture.js",
+      "sha256": "f76bb3136534cf763330c7a2a9b786c6822757f4ddf4d863d0f5a955383edef0"
+    },
+    {
+      "path": "android/app/src/main/assets/web/ui.css",
+      "sha256": "f962cfa03c764616e7c846041cae919cee0bfbd0078c56a46fa01e01b33f4d1c"
+    },
+    {
+      "path": "android/app/src/main/assets/web/viewer.js",
+      "sha256": "72573df20da8c13e0602ba11669c96da276c74cca387017668c00e8ea0e74f6c"
+    },
+    {
+      "path": "android/app/src/main/assets/web/assets/courtyard.png",
+      "sha256": "d8d6f1023c793ab95827f6d59a5619ef26999858051ab9acb1ddf570bbff88d0"
+    },
+    {
+      "path": "android/app/src/main/assets/web/assets/lane.png",
+      "sha256": "4039ac213a42d5a7d172b76950b9753d32fc088b02bbb3bd06bc1776bf0837ac"
+    },
+    {
+      "path": "android/app/src/main/assets/web/assets/paper.wav",
+      "sha256": "cc7b2042c15ecbfedd08ad58acdbfd146f0de2c83bd17df1502eaa65f9637a2f"
+    },
+    {
+      "path": "android/app/src/main/assets/web/assets/room.png",
+      "sha256": "6ee0f427aba2801b3045254f0afde6b55d74aa581d922a2ecc445f59a0d7a92e"
+    },
+    {
+      "path": "android/app/src/main/assets/web/assets/wood.wav",
+      "sha256": "9a8d8f1038c2f6a186d00c173f9f251d056bafc49a839d6128f9cc13a377632f"
+    },
+    {
+      "path": "android/app/src/main/java/com/yuji/game/ByteRange.java",
+      "sha256": "343a4b940512f616e16a9975cd1c9bbd0a115a2a08a39cff6a298aac4dd9518f"
+    },
+    {
+      "path": "android/app/src/main/java/com/yuji/game/MainActivity.java",
+      "sha256": "13a2ae21e8ee4189ade811630d1bbae075e29fd6b9748f22f20d7ae6585e3992"
+    },
+    {
+      "path": "android/app/src/main/res/drawable/ic_launcher.xml",
+      "sha256": "fd92760494beba0a5a0e6b8cc5df421543ec06b934b99d19208a48a55a0e5c67"
+    },
+    {
+      "path": "android/app/src/main/res/values/styles.xml",
+      "sha256": "1e0c04b064500c268cb2785985399d05f5464ffd4eac87b10082bf8ae4459f24"
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.jar",
+      "sha256": "e996d452d2645e70c01c11143ca2d3742734a28da2bf61f25c82bdc288c9e637"
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.properties",
+      "sha256": "284046dcc2bf5e2d2cfce02511337d01c5e84942aa1a82f5edcf924b0cb392c7"
+    },
+    {
+      "path": "desktop/app.ico",
+      "sha256": "13289b1fbea705fc3fe83455f81076940edc077392604b8e594f72de30695869"
+    },
+    {
+      "path": "desktop/app.png",
+      "sha256": "d78c49c3f9796e7e32da350a9cd079a628b6ee44cf49219bbe21f46b7224e069"
+    },
+    {
+      "path": "desktop/desktop.js",
+      "sha256": "686b0679e2062c81c7f312efd694e4eb6f188f4d95dfb8cf89d5c1d26f354af8"
+    },
+    {
+      "path": "desktop/main.cjs",
+      "sha256": "5d2ab75383adcb1259ce69bdb122c3b99fb27d6f2a10ee731d47ee3f654fe770"
+    },
+    {
+      "path": "desktop/package.json",
+      "sha256": "757e51a940f310a43c6d06b42624e07d77cd309d26081b9d7404eda96eee6269"
+    },
+    {
+      "path": "desktop/preload.cjs",
+      "sha256": "bc04e8adabc4a536d8d7b4b2d1a1d9b72e611e1f50786b81b2c1368d065d9017"
+    },
+    {
+      "path": "desktop/SOURCE_MANIFEST.json",
+      "sha256": "3bc55148a2fbe3290eb836db5ae7089ba77d8ecb0742c0409817ccd521e9ecc0"
+    },
+    {
+      "path": "desktop/game/archive.js",
+      "sha256": "634a81badf119a09845e6f29ba3a56b13e483f24dee719b6de4efbec5baa8878"
+    },
+    {
+      "path": "desktop/game/arena.js",
+      "sha256": "994f23c97e1897195efce9503eb98720a8352cff775232ac92115b1e08b1a3c1"
+    },
+    {
+      "path": "desktop/game/choose.js",
+      "sha256": "a84841ccc7eb51850ac21910b7651a96d0a4b596ae3dfae1509a001f3e261b49"
+    },
+    {
+      "path": "desktop/game/desktop.js",
+      "sha256": "686b0679e2062c81c7f312efd694e4eb6f188f4d95dfb8cf89d5c1d26f354af8"
+    },
+    {
+      "path": "desktop/game/ending.js",
+      "sha256": "27af4d849b9e7a394888b8c21e6806f97e1b825851738d915f5e4dc9d5140a2d"
+    },
+    {
+      "path": "desktop/game/engine.js",
+      "sha256": "56a61a34d3c114c7e50f46d1c4f4791ae3090e63e892cbad1697e9f09a2360e2"
+    },
+    {
+      "path": "desktop/game/forms.js",
+      "sha256": "9a452d8fae5082ada52efd24b8ddb4a3212d40456359d1d08cdd124d843ab8ce"
+    },
+    {
+      "path": "desktop/game/immersion.js",
+      "sha256": "231299181d1ef131e1d5912284f7d147af726e0041d4387a6b77edcdbfc7d83e"
+    },
+    {
+      "path": "desktop/game/index.html",
+      "sha256": "ddafcdbd21a54031ea4b45a5bd809a71337de835a6f6cbe87d184392267be055"
+    },
+    {
+      "path": "desktop/game/ink.js",
+      "sha256": "28507751cf633d5c882353af872e79a3226b2cfa1b13b8eb5b8fd46ab0345e4d"
+    },
+    {
+      "path": "desktop/game/mobile-layout.css",
+      "sha256": "c56c7068c357462f017a7a3b2ad902a617c48ee3ef97708173bc3d4b8aebbeaa"
+    },
+    {
+      "path": "desktop/game/mobile-layout.js",
+      "sha256": "4dc307534210f8e26a2af11357ef1315049bd3be9786606ef6604fd70556ff9b"
+    },
+    {
+      "path": "desktop/game/play.js",
+      "sha256": "c45248d312b2998b7061e1d89978d55f6fc01337ad474abb026eeb107c6868aa"
+    },
+    {
+      "path": "desktop/game/render.js",
+      "sha256": "cd53d97ef10397a714a7f3a3cd2731e713d3d795aab27e5839109efe77ebe4c6"
+    },
+    {
+      "path": "desktop/game/reveal.js",
+      "sha256": "e85bfb9767bfc4c525d62a5fe66ee12805ad5295141530433115d833cd331ba7"
+    },
+    {
+      "path": "desktop/game/sculpture-worker.js",
+      "sha256": "a649e130afcd105b9329f3f0562e9e098b919589aa54abad922456af9c30b7ee"
+    },
+    {
+      "path": "desktop/game/sculpture.js",
+      "sha256": "f76bb3136534cf763330c7a2a9b786c6822757f4ddf4d863d0f5a955383edef0"
+    },
+    {
+      "path": "desktop/game/ui.css",
+      "sha256": "f962cfa03c764616e7c846041cae919cee0bfbd0078c56a46fa01e01b33f4d1c"
+    },
+    {
+      "path": "desktop/game/viewer.js",
+      "sha256": "72573df20da8c13e0602ba11669c96da276c74cca387017668c00e8ea0e74f6c"
+    },
+    {
+      "path": "desktop/game/assets/courtyard.png",
+      "sha256": "d8d6f1023c793ab95827f6d59a5619ef26999858051ab9acb1ddf570bbff88d0"
+    },
+    {
+      "path": "desktop/game/assets/lane.png",
+      "sha256": "4039ac213a42d5a7d172b76950b9753d32fc088b02bbb3bd06bc1776bf0837ac"
+    },
+    {
+      "path": "desktop/game/assets/paper.wav",
+      "sha256": "cc7b2042c15ecbfedd08ad58acdbfd146f0de2c83bd17df1502eaa65f9637a2f"
+    },
+    {
+      "path": "desktop/game/assets/room.png",
+      "sha256": "6ee0f427aba2801b3045254f0afde6b55d74aa581d922a2ecc445f59a0d7a92e"
+    },
+    {
+      "path": "desktop/game/assets/wood.wav",
+      "sha256": "9a8d8f1038c2f6a186d00c173f9f251d056bafc49a839d6128f9cc13a377632f"
+    }
+  ],
+  "adaptations": [
+    {
+      "path": "android/sync-web.py",
+      "importedSha256": "2494c83afc0b3c3beaeca6f6675896bb71fe7ae74bebf6791236270a9a317977",
+      "currentSha256": "681ac02d8e2b042be0da0cb87c98584d78f16840d509dc99dc2d96ae735185d1"
+    },
+    {
+      "path": "desktop/package.json",
+      "importedSha256": "757e51a940f310a43c6d06b42624e07d77cd309d26081b9d7404eda96eee6269",
+      "currentSha256": "74cc939268b05024fef3da53118814c889d86e0d40713902e96f157f40ce7e1e"
+    }
+  ]
+}

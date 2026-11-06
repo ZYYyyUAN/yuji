@@ -1,0 +1,30 @@
+# Local credentials, signing material and machine-specific configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.dpapi
+local.properties
+# Dependencies and generated outputs
+node_modules/
+.gradle/
+build/
+dist/
+release/
+__pycache__/
+*.pyc
+*.apk
+*.aab
+*.exe
+*.zip
+*.log
+# IDE and local files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

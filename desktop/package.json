@@ -1,0 +1,15 @@
+{
+  "name": "yuji",
+  "productName": "余迹",
+  "version": "0.21.0",
+  "description": "余迹 · 离线单机交锋",
+  "private": true,
+  "main": "main.cjs",
+  "author": "余迹开发组",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "44.9.1"
+  }
+}

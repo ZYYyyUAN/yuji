@@ -1,0 +1,48 @@
+{
+  "source": "outputs/余迹_参赛候选21",
+  "version": "0.21.0",
+  "files": [
+    {
+      "file": "ink.js",
+      "sourceSha256": "28507751cf633d5c882353af872e79a3226b2cfa1b13b8eb5b8fd46ab0345e4d",
+      "adaptedSha256": "28507751cf633d5c882353af872e79a3226b2cfa1b13b8eb5b8fd46ab0345e4d",
+      "unchanged": true
+    },
+    {
+      "file": "arena.js",
+      "sourceSha256": "994f23c97e1897195efce9503eb98720a8352cff775232ac92115b1e08b1a3c1",
+      "adaptedSha256": "994f23c97e1897195efce9503eb98720a8352cff775232ac92115b1e08b1a3c1",
+      "unchanged": true
+    },
+    {
+      "file": "engine.js",
+      "sourceSha256": "56a61a34d3c114c7e50f46d1c4f4791ae3090e63e892cbad1697e9f09a2360e2",
+      "adaptedSha256": "56a61a34d3c114c7e50f46d1c4f4791ae3090e63e892cbad1697e9f09a2360e2",
+      "unchanged": true
+    },
+    {
+      "file": "forms.js",
+      "sourceSha256": "9a452d8fae5082ada52efd24b8ddb4a3212d40456359d1d08cdd124d843ab8ce",
+      "adaptedSha256": "9a452d8fae5082ada52efd24b8ddb4a3212d40456359d1d08cdd124d843ab8ce",
+      "unchanged": true
+    },
+    {
+      "file": "sculpture.js",
+      "sourceSha256": "f76bb3136534cf763330c7a2a9b786c6822757f4ddf4d863d0f5a955383edef0",
+      "adaptedSha256": "f76bb3136534cf763330c7a2a9b786c6822757f4ddf4d863d0f5a955383edef0",
+      "unchanged": true
+    },
+    {
+      "file": "render.js",
+      "sourceSha256": "cd53d97ef10397a714a7f3a3cd2731e713d3d795aab27e5839109efe77ebe4c6",
+      "adaptedSha256": "417fb4fe2712423040453b59a344c738b78ea39567cb9eeeb57fe0db1f5feff3",
+      "unchanged": false
+    },
+    {
+      "file": "choose.js",
+      "sourceSha256": "a84841ccc7eb51850ac21910b7651a96d0a4b596ae3dfae1509a001f3e261b49",
+      "adaptedSha256": "3973d1c951f7313a6f843cfa1a7cc2909c384b0d0812039d9ed0e3b90c13d896",
+      "unchanged": false
+    }
+  ]
+}
